@@ -14,6 +14,10 @@
 		124E7DB628AD71EB00D48156 /* timerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E7DB528AD71EB00D48156 /* timerTests.swift */; };
 		124E7DC028AD71EB00D48156 /* timerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E7DBF28AD71EB00D48156 /* timerUITests.swift */; };
 		124E7DC228AD71EB00D48156 /* timerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E7DC128AD71EB00D48156 /* timerUITestsLaunchTests.swift */; };
+		124E7DD028AD7CAB00D48156 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E7DCF28AD7CAB00D48156 /* Event.swift */; };
+		124E7DD228AD7D1D00D48156 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E7DD128AD7D1D00D48156 /* Exercise.swift */; };
+		124E7DD428AD7EB200D48156 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E7DD328AD7EB100D48156 /* Routine.swift */; };
+		124E7DD928AD80D500D48156 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E7DD828AD80D500D48156 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		124E7DBB28AD71EB00D48156 /* timerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = timerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		124E7DBF28AD71EB00D48156 /* timerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timerUITests.swift; sourceTree = "<group>"; };
 		124E7DC128AD71EB00D48156 /* timerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		124E7DCF28AD7CAB00D48156 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		124E7DD128AD7D1D00D48156 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		124E7DD328AD7EB100D48156 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
+		124E7DD828AD80D500D48156 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,8 @@
 		124E7DA328AD71E900D48156 /* timer */ = {
 			isa = PBXGroup;
 			children = (
+				124E7DD528AD804F00D48156 /* Screens */,
+				124E7DCE28AD7C9200D48156 /* Models */,
 				124E7DA428AD71E900D48156 /* timerApp.swift */,
 				124E7DA628AD71E900D48156 /* ContentView.swift */,
 				124E7DA828AD71EB00D48156 /* Assets.xcassets */,
@@ -125,6 +135,24 @@
 				124E7DC128AD71EB00D48156 /* timerUITestsLaunchTests.swift */,
 			);
 			path = timerUITests;
+			sourceTree = "<group>";
+		};
+		124E7DCE28AD7C9200D48156 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				124E7DCF28AD7CAB00D48156 /* Event.swift */,
+				124E7DD128AD7D1D00D48156 /* Exercise.swift */,
+				124E7DD328AD7EB100D48156 /* Routine.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		124E7DD528AD804F00D48156 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				124E7DD828AD80D500D48156 /* MainView.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +285,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				124E7DD428AD7EB200D48156 /* Routine.swift in Sources */,
+				124E7DD928AD80D500D48156 /* MainView.swift in Sources */,
 				124E7DA728AD71E900D48156 /* ContentView.swift in Sources */,
+				124E7DD228AD7D1D00D48156 /* Exercise.swift in Sources */,
+				124E7DD028AD7CAB00D48156 /* Event.swift in Sources */,
 				124E7DA528AD71E900D48156 /* timerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

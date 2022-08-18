@@ -18,6 +18,7 @@
 		124E7DD228AD7D1D00D48156 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E7DD128AD7D1D00D48156 /* Exercise.swift */; };
 		124E7DD428AD7EB200D48156 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E7DD328AD7EB100D48156 /* Routine.swift */; };
 		124E7DD928AD80D500D48156 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E7DD828AD80D500D48156 /* MainView.swift */; };
+		124E7DDD28AEBBFC00D48156 /* TimerApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 124E7DDB28AEBBFC00D48156 /* TimerApp.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		124E7DD128AD7D1D00D48156 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		124E7DD328AD7EB100D48156 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 		124E7DD828AD80D500D48156 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		124E7DDC28AEBBFC00D48156 /* TimerApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TimerApp.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 		124E7DA328AD71E900D48156 /* timer */ = {
 			isa = PBXGroup;
 			children = (
+				124E7DDA28AEBBDB00D48156 /* CoreData */,
 				124E7DD528AD804F00D48156 /* Screens */,
 				124E7DCE28AD7C9200D48156 /* Models */,
 				124E7DA428AD71E900D48156 /* timerApp.swift */,
@@ -153,6 +156,14 @@
 				124E7DD828AD80D500D48156 /* MainView.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		124E7DDA28AEBBDB00D48156 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				124E7DDB28AEBBFC00D48156 /* TimerApp.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +299,7 @@
 				124E7DD428AD7EB200D48156 /* Routine.swift in Sources */,
 				124E7DD928AD80D500D48156 /* MainView.swift in Sources */,
 				124E7DA728AD71E900D48156 /* ContentView.swift in Sources */,
+				124E7DDD28AEBBFC00D48156 /* TimerApp.xcdatamodeld in Sources */,
 				124E7DD228AD7D1D00D48156 /* Exercise.swift in Sources */,
 				124E7DD028AD7CAB00D48156 /* Event.swift in Sources */,
 				124E7DA528AD71E900D48156 /* timerApp.swift in Sources */,
@@ -617,6 +629,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		124E7DDB28AEBBFC00D48156 /* TimerApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				124E7DDC28AEBBFC00D48156 /* TimerApp.xcdatamodel */,
+			);
+			currentVersion = 124E7DDC28AEBBFC00D48156 /* TimerApp.xcdatamodel */;
+			path = TimerApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 124E7D9928AD71E900D48156 /* Project object */;
 }

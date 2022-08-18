@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct Routine {
+class Routine {
+    var creationDate: Date
+    
     var name: String
     var description: String?
     
@@ -26,4 +28,31 @@ struct Routine {
      If null or ETO is enabled, all exercises added to this routine will have their own duration
      */
     var defaultExerciseDuration: Int?
+    
+    init(creationDate: Date, name: String, description: String? = nil, restLength: Int? = nil, defaultExerciseDuration: Int? = nil) {
+        self.creationDate = creationDate
+        self.name = name
+        self.description = description
+        self.restLength = restLength
+        self.defaultExerciseDuration = defaultExerciseDuration
+        self.events = []
+    }
+    
+    static func convertEventsToData(events: [Event]) -> Data? {
+        do {
+            return try NSKeyedArchiver.archivedData(withRootObject: events, requiringSecureCoding: true)
+        } catch {
+            print("Could not convert events \(events) to data")
+        }
+        
+        return Data(capacity: 0)
+    }
+    
+    static func convertDataToEvents(data: Data) -> [Event] {
+        guard let events = try? NSKeyedUnarchiver.unarchivedObject(ofClass: NSArray.self, from: data) as? [Event] else {
+            return []
+        }
+        
+        return events
+    }
 }

@@ -1,29 +1,34 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="20G165" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="ExerciseEventModel" representedClassName="ExerciseEventModel" syncable="YES" codeGenerationType="class">
-        <attribute name="duration" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="exercise" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" allowsCloudEncryption="YES" customClassName="Exercise"/>
+    <entity name="Event" representedClassName="Event" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="displayDesc" optional="YES" attributeType="String"/>
+        <attribute name="displayName" optional="YES" attributeType="String"/>
+        <attribute name="duration" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="routines" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Routine" inverseName="events" inverseEntity="Routine"/>
     </entity>
-    <entity name="ExerciseModel" representedClassName="ExerciseModel" syncable="YES" codeGenerationType="class">
+    <entity name="Exercise" representedClassName="Exercise" syncable="YES" codeGenerationType="class">
         <attribute name="creationDate" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="desc" optional="YES" attributeType="String"/>
         <attribute name="name" attributeType="String"/>
+        <relationship name="exerciseEvents" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ExerciseEvent" inverseName="exercise" inverseEntity="ExerciseEvent"/>
     </entity>
-    <entity name="RestEventModel" representedClassName="RestEventModel" syncable="YES" codeGenerationType="class">
-        <attribute name="duration" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    <entity name="ExerciseEvent" representedClassName="ExerciseEvent" parentEntity="Event" syncable="YES" codeGenerationType="class">
+        <relationship name="exercise" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Exercise" inverseName="exerciseEvents" inverseEntity="Exercise"/>
     </entity>
-    <entity name="RoutineModel" representedClassName="RoutineModel" syncable="YES" codeGenerationType="class">
+    <entity name="RestEvent" representedClassName="RestEvent" parentEntity="Event" syncable="YES" codeGenerationType="class"/>
+    <entity name="Routine" representedClassName="Routine" syncable="YES" codeGenerationType="class">
         <attribute name="creationDate" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="defaultExerciseDuration" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="desc" optional="YES" attributeType="String"/>
-        <attribute name="events" attributeType="Binary" valueTransformerName="NSSecureUnarchiveFromData" customClassName="[Event]"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="restLength" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="events" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Event" inverseName="routines" inverseEntity="Event"/>
     </entity>
     <elements>
-        <element name="RoutineModel" positionX="-63" positionY="-18" width="128" height="133"/>
-        <element name="ExerciseEventModel" positionX="-54" positionY="0" width="128" height="73"/>
-        <element name="RestEventModel" positionX="-36" positionY="9" width="128" height="58"/>
-        <element name="ExerciseModel" positionX="-18" positionY="27" width="128" height="88"/>
+        <element name="Routine" positionX="-63" positionY="-18" width="128" height="133"/>
+        <element name="Exercise" positionX="-18" positionY="27" width="128" height="103"/>
+        <element name="Event" positionX="0" positionY="72" width="128" height="89"/>
+        <element name="ExerciseEvent" positionX="18" positionY="90" width="128" height="44"/>
+        <element name="RestEvent" positionX="36" positionY="99" width="128" height="29"/>
     </elements>
 </model>

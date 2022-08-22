@@ -10,15 +10,15 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         TabView {
-            ContentView()
+            RoutineListView()
                 .tabItem {
                     Label("Routines", systemImage: "list.dash")
                 }
-            ContentView()
+            RoutineListView()
                 .tabItem {
                     Label("Exercises", systemImage: "bicycle")
                 }
-            ContentView()
+            RoutineListView()
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }

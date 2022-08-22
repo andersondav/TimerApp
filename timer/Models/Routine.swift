@@ -11,7 +11,7 @@ class Routine {
     var creationDate: Date
     
     var name: String
-    var description: String?
+    var desc: String?
     
     /*
      List of exercises/rests that are part of the routine (in order)
@@ -29,10 +29,10 @@ class Routine {
      */
     var defaultExerciseDuration: Int?
     
-    init(creationDate: Date, name: String, description: String? = nil, restLength: Int? = nil, defaultExerciseDuration: Int? = nil) {
+    init(creationDate: Date, name: String, desc: String? = nil, restLength: Int? = nil, defaultExerciseDuration: Int? = nil, events: [Event] = [Event]()) {
         self.creationDate = creationDate
         self.name = name
-        self.description = description
+        self.desc = desc
         self.restLength = restLength
         self.defaultExerciseDuration = defaultExerciseDuration
         self.events = []
@@ -49,7 +49,8 @@ class Routine {
     }
     
     static func convertDataToEvents(data: Data) -> [Event] {
-        guard let events = try? NSKeyedUnarchiver.unarchivedObject(ofClass: NSArray.self, from: data) as? [Event] else {
+        guard let events = try? NSKeyedUnarchiver.unarchivedArrayOfObjects(ofClasses: [ExerciseEvent.self, RestEvent.self], from: data) as? [Event] else {
+            print("Error loading routine events")
             return []
         }
         

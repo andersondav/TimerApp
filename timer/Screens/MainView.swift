@@ -14,11 +14,11 @@ struct MainView: View {
                 .tabItem {
                     Label("Routines", systemImage: "list.dash")
                 }
-            RoutineListView()
+            ExerciseListView()
                 .tabItem {
                     Label("Exercises", systemImage: "bicycle")
                 }
-            RoutineListView()
+            SettingsView()
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }

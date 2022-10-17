@@ -29,7 +29,7 @@ struct RoutineListView: View {
             }
             .navigationTitle("Routines")
             .toolbar {
-                ToolbarItem(placement: .automatic) {
+                ToolbarItem() {
                     NavigationLink {
                         CreateRoutineView()
                     } label: {

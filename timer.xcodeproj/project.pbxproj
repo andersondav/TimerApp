@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		124DEDF828FDDF3500778D23 /* CreateRoutineExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DEDF728FDDF3500778D23 /* CreateRoutineExerciseView.swift */; };
+		124DEDFB28FDE71F00778D23 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DEDFA28FDE71F00778D23 /* Strings.swift */; };
+		124DEE0328FDEE5000778D23 /* EnterTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DEE0228FDEE5000778D23 /* EnterTitleView.swift */; };
+		124DEE0528FDF38100778D23 /* EnterDescView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DEE0428FDF38100778D23 /* EnterDescView.swift */; };
+		124DEE0728FDF62100778D23 /* CreateExerciseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DEE0628FDF62100778D23 /* CreateExerciseViewModel.swift */; };
+		124DEE0928FDF68600778D23 /* CreateExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DEE0828FDF68600778D23 /* CreateExerciseView.swift */; };
+		124DEE0B28FDF76900778D23 /* CreateExerciseDescAndLengthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124DEE0A28FDF76900778D23 /* CreateExerciseDescAndLengthView.swift */; };
 		124E7DA528AD71E900D48156 /* timerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E7DA428AD71E900D48156 /* timerApp.swift */; };
 		124E7DA928AD71EB00D48156 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 124E7DA828AD71EB00D48156 /* Assets.xcassets */; };
 		124E7DAC28AD71EB00D48156 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 124E7DAB28AD71EB00D48156 /* Preview Assets.xcassets */; };
@@ -20,8 +27,9 @@
 		124E7DE928BA97F700D48156 /* ExerciseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E7DE828BA97F700D48156 /* ExerciseListView.swift */; };
 		124E7DED28BA982300D48156 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E7DEC28BA982300D48156 /* SettingsView.swift */; };
 		124E7DEF28BAA01C00D48156 /* CreateRoutineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E7DEE28BAA01C00D48156 /* CreateRoutineView.swift */; };
-		124E7DF128BAA43F00D48156 /* RoutineDataEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E7DF028BAA43F00D48156 /* RoutineDataEntryView.swift */; };
-		124E7DF328BAA45500D48156 /* RoutineExerciseEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E7DF228BAA45500D48156 /* RoutineExerciseEntryView.swift */; };
+		127B613928CFDEF6008825E7 /* CreateRoutineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127B613828CFDEF6008825E7 /* CreateRoutineViewModel.swift */; };
+		127B613B28CFDFEB008825E7 /* CreateRoutineDescView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127B613A28CFDFEB008825E7 /* CreateRoutineDescView.swift */; };
+		127B613D28CFE217008825E7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127B613C28CFE217008825E7 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +50,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		124DEDF728FDDF3500778D23 /* CreateRoutineExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoutineExerciseView.swift; sourceTree = "<group>"; };
+		124DEDFA28FDE71F00778D23 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		124DEE0228FDEE5000778D23 /* EnterTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterTitleView.swift; sourceTree = "<group>"; };
+		124DEE0428FDF38100778D23 /* EnterDescView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterDescView.swift; sourceTree = "<group>"; };
+		124DEE0628FDF62100778D23 /* CreateExerciseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateExerciseViewModel.swift; sourceTree = "<group>"; };
+		124DEE0828FDF68600778D23 /* CreateExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateExerciseView.swift; sourceTree = "<group>"; };
+		124DEE0A28FDF76900778D23 /* CreateExerciseDescAndLengthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateExerciseDescAndLengthView.swift; sourceTree = "<group>"; };
 		124E7DA128AD71E900D48156 /* timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = timer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		124E7DA428AD71E900D48156 /* timerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timerApp.swift; sourceTree = "<group>"; };
 		124E7DA828AD71EB00D48156 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,8 +73,9 @@
 		124E7DE828BA97F700D48156 /* ExerciseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListView.swift; sourceTree = "<group>"; };
 		124E7DEC28BA982300D48156 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		124E7DEE28BAA01C00D48156 /* CreateRoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoutineView.swift; sourceTree = "<group>"; };
-		124E7DF028BAA43F00D48156 /* RoutineDataEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDataEntryView.swift; sourceTree = "<group>"; };
-		124E7DF228BAA45500D48156 /* RoutineExerciseEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineExerciseEntryView.swift; sourceTree = "<group>"; };
+		127B613828CFDEF6008825E7 /* CreateRoutineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoutineViewModel.swift; sourceTree = "<group>"; };
+		127B613A28CFDFEB008825E7 /* CreateRoutineDescView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoutineDescView.swift; sourceTree = "<group>"; };
+		127B613C28CFE217008825E7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +103,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		124DEDF928FDE6BA00778D23 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				124DEDFA28FDE71F00778D23 /* Strings.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		124DEDFC28FDED7600778D23 /* ExerciseCreation */ = {
+			isa = PBXGroup;
+			children = (
+				124DEE0628FDF62100778D23 /* CreateExerciseViewModel.swift */,
+				124DEE0828FDF68600778D23 /* CreateExerciseView.swift */,
+				124DEE0A28FDF76900778D23 /* CreateExerciseDescAndLengthView.swift */,
+			);
+			path = ExerciseCreation;
+			sourceTree = "<group>";
+		};
+		124DEDFF28FDEDC400778D23 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+				124DEE0228FDEE5000778D23 /* EnterTitleView.swift */,
+				124DEE0428FDF38100778D23 /* EnterDescView.swift */,
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
 		124E7D9828AD71E900D48156 = {
 			isa = PBXGroup;
 			children = (
@@ -110,11 +153,13 @@
 		124E7DA328AD71E900D48156 /* timer */ = {
 			isa = PBXGroup;
 			children = (
+				124DEDF928FDE6BA00778D23 /* Assets */,
 				124E7DDA28AEBBDB00D48156 /* CoreData */,
 				124E7DD528AD804F00D48156 /* Screens */,
 				124E7DA428AD71E900D48156 /* timerApp.swift */,
 				124E7DA828AD71EB00D48156 /* Assets.xcassets */,
 				124E7DAA28AD71EB00D48156 /* Preview Content */,
+				127B613C28CFE217008825E7 /* Extensions.swift */,
 			);
 			path = timer;
 			sourceTree = "<group>";
@@ -147,6 +192,7 @@
 		124E7DD528AD804F00D48156 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				124DEDFF28FDEDC400778D23 /* Templates */,
 				124E7DEB28BA980800D48156 /* Exercises */,
 				124E7DEA28BA97FE00D48156 /* Routines */,
 				124E7DD828AD80D500D48156 /* MainView.swift */,
@@ -167,10 +213,8 @@
 		124E7DEA28BA97FE00D48156 /* Routines */ = {
 			isa = PBXGroup;
 			children = (
+				127B613728CFDECE008825E7 /* RoutineCreation */,
 				124E7DE628B43BBA00D48156 /* RoutineListView.swift */,
-				124E7DEE28BAA01C00D48156 /* CreateRoutineView.swift */,
-				124E7DF028BAA43F00D48156 /* RoutineDataEntryView.swift */,
-				124E7DF228BAA45500D48156 /* RoutineExerciseEntryView.swift */,
 			);
 			path = Routines;
 			sourceTree = "<group>";
@@ -178,9 +222,21 @@
 		124E7DEB28BA980800D48156 /* Exercises */ = {
 			isa = PBXGroup;
 			children = (
+				124DEDFC28FDED7600778D23 /* ExerciseCreation */,
 				124E7DE828BA97F700D48156 /* ExerciseListView.swift */,
 			);
 			path = Exercises;
+			sourceTree = "<group>";
+		};
+		127B613728CFDECE008825E7 /* RoutineCreation */ = {
+			isa = PBXGroup;
+			children = (
+				124E7DEE28BAA01C00D48156 /* CreateRoutineView.swift */,
+				127B613828CFDEF6008825E7 /* CreateRoutineViewModel.swift */,
+				127B613A28CFDFEB008825E7 /* CreateRoutineDescView.swift */,
+				124DEDF728FDDF3500778D23 /* CreateRoutineExerciseView.swift */,
+			);
+			path = RoutineCreation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,14 +371,22 @@
 			files = (
 				124E7DED28BA982300D48156 /* SettingsView.swift in Sources */,
 				124E7DE728B43BBA00D48156 /* RoutineListView.swift in Sources */,
-				124E7DF128BAA43F00D48156 /* RoutineDataEntryView.swift in Sources */,
+				124DEE0928FDF68600778D23 /* CreateExerciseView.swift in Sources */,
+				127B613928CFDEF6008825E7 /* CreateRoutineViewModel.swift in Sources */,
+				124DEE0328FDEE5000778D23 /* EnterTitleView.swift in Sources */,
+				124DEE0B28FDF76900778D23 /* CreateExerciseDescAndLengthView.swift in Sources */,
 				124E7DE528B43ADF00D48156 /* DataController.swift in Sources */,
-				124E7DF328BAA45500D48156 /* RoutineExerciseEntryView.swift in Sources */,
+				127B613B28CFDFEB008825E7 /* CreateRoutineDescView.swift in Sources */,
+				124DEE0528FDF38100778D23 /* EnterDescView.swift in Sources */,
 				124E7DD928AD80D500D48156 /* MainView.swift in Sources */,
 				124E7DDD28AEBBFC00D48156 /* TimerApp.xcdatamodeld in Sources */,
+				124DEDFB28FDE71F00778D23 /* Strings.swift in Sources */,
 				124E7DE928BA97F700D48156 /* ExerciseListView.swift in Sources */,
+				124DEE0728FDF62100778D23 /* CreateExerciseViewModel.swift in Sources */,
 				124E7DA528AD71E900D48156 /* timerApp.swift in Sources */,
+				127B613D28CFE217008825E7 /* Extensions.swift in Sources */,
 				124E7DEF28BAA01C00D48156 /* CreateRoutineView.swift in Sources */,
+				124DEDF828FDDF3500778D23 /* CreateRoutineExerciseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

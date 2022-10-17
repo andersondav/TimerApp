@@ -8,8 +8,38 @@
 import SwiftUI
 
 struct ExerciseListView: View {
+    @Environment(\.managedObjectContext) var moc
+
+    @FetchRequest(sortDescriptors: []) var exercises: FetchedResults<Exercise>
+    
+    @State var creatingExercise = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            Group {
+                if exercises.count == 0 {
+                    VStack {
+                    Text("Tap the + button to create a new exercise!")
+                    Spacer()
+                    }
+                }
+                else {
+                    List(exercises) { exercise in
+                        Text(exercise.name ?? "")
+                    }
+                }
+            }
+            .navigationTitle("Exercises")
+            .toolbar {
+                ToolbarItem() {
+                    NavigationLink(isActive: $creatingExercise) {
+                        CreateExerciseView(creatingExercise: $creatingExercise)
+                    } label: {
+                        Image(systemName: "plus")
+                    }.isDetailLink(false)
+                }
+            }
+        }
     }
 }
 

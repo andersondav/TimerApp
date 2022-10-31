@@ -27,6 +27,12 @@
 		124E7DE928BA97F700D48156 /* ExerciseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E7DE828BA97F700D48156 /* ExerciseListView.swift */; };
 		124E7DED28BA982300D48156 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E7DEC28BA982300D48156 /* SettingsView.swift */; };
 		124E7DEF28BAA01C00D48156 /* CreateRoutineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124E7DEE28BAA01C00D48156 /* CreateRoutineView.swift */; };
+		12551B2A290C72A800A2E944 /* CreateRoutineAddExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12551B29290C72A800A2E944 /* CreateRoutineAddExerciseView.swift */; };
+		12551B2C290C72F200A2E944 /* ExerciseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12551B2B290C72F200A2E944 /* ExerciseCell.swift */; };
+		12551B30290C75AE00A2E944 /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12551B2F290C75AE00A2E944 /* DataExtensions.swift */; };
+		12551B322910440600A2E944 /* CheckboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12551B312910440600A2E944 /* CheckboxView.swift */; };
+		12551B35291056A900A2E944 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 12551B34291056A900A2E944 /* OrderedCollections */; };
+		12551B372910583E00A2E944 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12551B362910583E00A2E944 /* EventCell.swift */; };
 		127B613928CFDEF6008825E7 /* CreateRoutineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127B613828CFDEF6008825E7 /* CreateRoutineViewModel.swift */; };
 		127B613B28CFDFEB008825E7 /* CreateRoutineDescView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127B613A28CFDFEB008825E7 /* CreateRoutineDescView.swift */; };
 		127B613D28CFE217008825E7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127B613C28CFE217008825E7 /* Extensions.swift */; };
@@ -73,6 +79,11 @@
 		124E7DE828BA97F700D48156 /* ExerciseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseListView.swift; sourceTree = "<group>"; };
 		124E7DEC28BA982300D48156 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		124E7DEE28BAA01C00D48156 /* CreateRoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoutineView.swift; sourceTree = "<group>"; };
+		12551B29290C72A800A2E944 /* CreateRoutineAddExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoutineAddExerciseView.swift; sourceTree = "<group>"; };
+		12551B2B290C72F200A2E944 /* ExerciseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseCell.swift; sourceTree = "<group>"; };
+		12551B2F290C75AE00A2E944 /* DataExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
+		12551B312910440600A2E944 /* CheckboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxView.swift; sourceTree = "<group>"; };
+		12551B362910583E00A2E944 /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		127B613828CFDEF6008825E7 /* CreateRoutineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoutineViewModel.swift; sourceTree = "<group>"; };
 		127B613A28CFDFEB008825E7 /* CreateRoutineDescView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateRoutineDescView.swift; sourceTree = "<group>"; };
 		127B613C28CFE217008825E7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -83,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12551B35291056A900A2E944 /* OrderedCollections in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +138,9 @@
 			children = (
 				124DEE0228FDEE5000778D23 /* EnterTitleView.swift */,
 				124DEE0428FDF38100778D23 /* EnterDescView.swift */,
+				12551B2B290C72F200A2E944 /* ExerciseCell.swift */,
+				12551B312910440600A2E944 /* CheckboxView.swift */,
+				12551B362910583E00A2E944 /* EventCell.swift */,
 			);
 			path = Templates;
 			sourceTree = "<group>";
@@ -206,6 +221,7 @@
 			children = (
 				124E7DDB28AEBBFC00D48156 /* TimerApp.xcdatamodeld */,
 				124E7DE428B43ADF00D48156 /* DataController.swift */,
+				12551B2F290C75AE00A2E944 /* DataExtensions.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -235,6 +251,7 @@
 				127B613828CFDEF6008825E7 /* CreateRoutineViewModel.swift */,
 				127B613A28CFDFEB008825E7 /* CreateRoutineDescView.swift */,
 				124DEDF728FDDF3500778D23 /* CreateRoutineExerciseView.swift */,
+				12551B29290C72A800A2E944 /* CreateRoutineAddExerciseView.swift */,
 			);
 			path = RoutineCreation;
 			sourceTree = "<group>";
@@ -255,6 +272,9 @@
 			dependencies = (
 			);
 			name = timer;
+			packageProductDependencies = (
+				12551B34291056A900A2E944 /* OrderedCollections */,
+			);
 			productName = timer;
 			productReference = 124E7DA128AD71E900D48156 /* timer.app */;
 			productType = "com.apple.product-type.application";
@@ -327,6 +347,9 @@
 				Base,
 			);
 			mainGroup = 124E7D9828AD71E900D48156;
+			packageReferences = (
+				12551B33291056A900A2E944 /* XCRemoteSwiftPackageReference "swift-collections" */,
+			);
 			productRefGroup = 124E7DA228AD71E900D48156 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -372,6 +395,7 @@
 				124E7DED28BA982300D48156 /* SettingsView.swift in Sources */,
 				124E7DE728B43BBA00D48156 /* RoutineListView.swift in Sources */,
 				124DEE0928FDF68600778D23 /* CreateExerciseView.swift in Sources */,
+				12551B322910440600A2E944 /* CheckboxView.swift in Sources */,
 				127B613928CFDEF6008825E7 /* CreateRoutineViewModel.swift in Sources */,
 				124DEE0328FDEE5000778D23 /* EnterTitleView.swift in Sources */,
 				124DEE0B28FDF76900778D23 /* CreateExerciseDescAndLengthView.swift in Sources */,
@@ -380,11 +404,15 @@
 				124DEE0528FDF38100778D23 /* EnterDescView.swift in Sources */,
 				124E7DD928AD80D500D48156 /* MainView.swift in Sources */,
 				124E7DDD28AEBBFC00D48156 /* TimerApp.xcdatamodeld in Sources */,
+				12551B30290C75AE00A2E944 /* DataExtensions.swift in Sources */,
 				124DEDFB28FDE71F00778D23 /* Strings.swift in Sources */,
 				124E7DE928BA97F700D48156 /* ExerciseListView.swift in Sources */,
+				12551B2C290C72F200A2E944 /* ExerciseCell.swift in Sources */,
 				124DEE0728FDF62100778D23 /* CreateExerciseViewModel.swift in Sources */,
+				12551B2A290C72A800A2E944 /* CreateRoutineAddExerciseView.swift in Sources */,
 				124E7DA528AD71E900D48156 /* timerApp.swift in Sources */,
 				127B613D28CFE217008825E7 /* Extensions.swift in Sources */,
+				12551B372910583E00A2E944 /* EventCell.swift in Sources */,
 				124E7DEF28BAA01C00D48156 /* CreateRoutineView.swift in Sources */,
 				124DEDF828FDDF3500778D23 /* CreateRoutineExerciseView.swift in Sources */,
 			);
@@ -713,6 +741,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		12551B33291056A900A2E944 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		12551B34291056A900A2E944 /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 12551B33291056A900A2E944 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		124E7DDB28AEBBFC00D48156 /* TimerApp.xcdatamodeld */ = {

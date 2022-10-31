@@ -16,16 +16,14 @@ struct ExerciseListView: View {
     
     var body: some View {
         NavigationView {
-            Group {
+            VStack {
                 if exercises.count == 0 {
-                    VStack {
                     Text("Tap the + button to create a new exercise!")
                     Spacer()
-                    }
                 }
                 else {
                     List(exercises) { exercise in
-                        Text(exercise.name ?? "")
+                        ExerciseCell(exercise: exercise, onTap: nil)
                     }
                 }
             }

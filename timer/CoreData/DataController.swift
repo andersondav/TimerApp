@@ -9,10 +9,18 @@ import Foundation
 import CoreData
 
 class DataController: ObservableObject {
-    let container = NSPersistentContainer(name: "TimerApp")
+    static let dataController = DataController()
     
+    public static var moc: NSManagedObjectContext {
+        get {
+            return dataController.persistentContainer.viewContext
+        }
+    }
+    
+    let persistentContainer = NSPersistentContainer(name: "TimerApp")
+
     init() {
-        container.loadPersistentStores { desc, error in
+        self.persistentContainer.loadPersistentStores { desc, error in
             if let error = error {
                 print("Failed to load core data: \(error.localizedDescription)")
             }

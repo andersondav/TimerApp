@@ -9,12 +9,12 @@ import SwiftUI
 
 @main
 struct timerApp: App {
-    @StateObject private var dataController = DataController()
+    @StateObject private var dataController = DataController.dataController
     
     var body: some Scene {
         WindowGroup {
             MainView()
-                .environment(\.managedObjectContext, dataController.container.viewContext)
+                .environment(\.managedObjectContext, dataController.persistentContainer.viewContext)
         }
     }
 }

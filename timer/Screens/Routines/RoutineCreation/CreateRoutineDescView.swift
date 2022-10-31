@@ -10,6 +10,8 @@ import SwiftUI
 struct CreateRoutineDescView: View {
     @ObservedObject var createRoutineViewModel: CreateRoutineViewModel
     
+    @Binding var creatingRoutine: Bool
+    
     var body: some View {
         EnterDescView(descBinding: $createRoutineViewModel.desc)
         .navigationTitle(createRoutineViewModel.name)
@@ -17,7 +19,7 @@ struct CreateRoutineDescView: View {
         .toolbar {
             ToolbarItem() {
                 NavigationLink {
-                    CreateRoutineExerciseView(createRoutineViewModel: createRoutineViewModel)
+                    CreateRoutineExerciseView(createRoutineViewModel: createRoutineViewModel, creatingRoutine: $creatingRoutine)
                 } label: {
                     Text("Next")
                 }
@@ -28,6 +30,6 @@ struct CreateRoutineDescView: View {
 
 struct CreateRoutineDescView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateRoutineDescView(createRoutineViewModel: CreateRoutineViewModel())
+        CreateRoutineDescView(createRoutineViewModel: CreateRoutineViewModel(), creatingRoutine: Binding.constant(true))
     }
 }

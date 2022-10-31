@@ -12,6 +12,8 @@ struct RoutineListView: View {
     
     @FetchRequest(sortDescriptors: []) var routines: FetchedResults<Routine>
     
+    @State var creatingRoutine = false
+    
     var body: some View {
         NavigationView {
             Group {
@@ -30,11 +32,11 @@ struct RoutineListView: View {
             .navigationTitle("Routines")
             .toolbar {
                 ToolbarItem() {
-                    NavigationLink {
-                        CreateRoutineView()
-                    } label: {
+                    NavigationLink(isActive: $creatingRoutine, destination: {
+                        CreateRoutineView(creatingRoutine: $creatingRoutine)
+                    }, label: {
                         Image(systemName: "plus")
-                    }
+                    })
                 }
             }
         }

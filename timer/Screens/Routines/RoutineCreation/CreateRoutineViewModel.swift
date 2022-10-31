@@ -7,6 +7,7 @@
 
 import Foundation
 import OrderedCollections
+import CoreData
 
 public class CreateRoutineViewModel: ObservableObject {
     @Published var name: String = ""
@@ -25,9 +26,7 @@ public class CreateRoutineViewModel: ObservableObject {
         for e in selectedExercises {
             print(e)
             addExercise(e: e)
-        }
-        
-        print(events)
+        }        
     }
     
     func addExercise(e: Exercise) {
@@ -46,6 +45,22 @@ public class CreateRoutineViewModel: ObservableObject {
         }
         else {
             events.append(event)
+        }
+    }
+    
+    static func addNewRoutine(r: CreateRoutineViewModel, moc: NSManagedObjectContext) {
+        let routine = Routine(context: moc)
+        routine.name = r.name
+        routine.desc = r.desc
+        routine.restLength = Int64(r.restLength)
+        routine.defaultExerciseDuration = Int64(r.defaultExerciseLength)
+        routine.creationDate = Date()
+        routine.events = NSOrderedSet(array: r.events)
+        
+        do {
+            try moc.save()
+        } catch(let error) {
+            print("Error saving exercise: \(error.localizedDescription)")
         }
     }
 }

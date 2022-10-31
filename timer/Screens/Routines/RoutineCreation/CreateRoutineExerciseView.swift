@@ -14,6 +14,8 @@ enum FocusField: Hashable {
 }
 
 struct CreateRoutineExerciseView: View {
+    @Environment(\.managedObjectContext) var moc
+    
     @ObservedObject var createRoutineViewModel: CreateRoutineViewModel
     
     @State var presentExerciseAlert = false
@@ -22,6 +24,8 @@ struct CreateRoutineExerciseView: View {
     @State var presentEmptyWarning = false
     
     @FocusState var focusField: FocusField?
+    
+    @Binding var creatingRoutine: Bool
     
     var body: some View {
         GeometryReader { metrics in
@@ -96,6 +100,10 @@ struct CreateRoutineExerciseView: View {
                     if createRoutineViewModel.events.count == 0 {
                         presentEmptyWarning = true
                     }
+                    else {
+                        CreateRoutineViewModel.addNewRoutine(r: createRoutineViewModel, moc: moc)
+                        creatingRoutine = false
+                    }
                 } label: {
                     Text("Finish")
                 }
@@ -133,6 +141,6 @@ struct CreateRoutineExerciseView: View {
 
 struct CreateRoutineExerciseView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateRoutineExerciseView(createRoutineViewModel: CreateRoutineViewModel())
+        CreateRoutineExerciseView(createRoutineViewModel: CreateRoutineViewModel(), creatingRoutine: Binding.constant(true))
     }
 }

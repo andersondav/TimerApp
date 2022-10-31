@@ -13,6 +13,8 @@ struct CreateRoutineView: View {
     @State var isTitleChosen = false
     @State var displayErrorMsg = false
     
+    @Binding var creatingRoutine: Bool
+    
     var body: some View {
         EnterTitleView(nameBinding: $createRoutineViewModel.name, errorMsg: "Please enter a routine name", titleText: "Give your routine a name!", placeholder: "Routine name", displayErrorMsg: $displayErrorMsg)
             .navigationTitle("New Routine")
@@ -30,7 +32,7 @@ struct CreateRoutineView: View {
                 }
             }
         
-        NavigationLink(destination: CreateRoutineDescView(createRoutineViewModel: createRoutineViewModel), isActive: $isTitleChosen) {
+        NavigationLink(destination: CreateRoutineDescView(createRoutineViewModel: createRoutineViewModel, creatingRoutine: $creatingRoutine), isActive: $isTitleChosen) {
             EmptyView()
         }
     }
@@ -38,6 +40,6 @@ struct CreateRoutineView: View {
 
 struct CreateRoutineView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateRoutineView()
+        CreateRoutineView(creatingRoutine: Binding.constant(true))
     }
 }

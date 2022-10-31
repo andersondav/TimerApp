@@ -9,6 +9,7 @@ import SwiftUI
 import OrderedCollections
 
 struct CreateRoutineAddExerciseView: View {
+    
     @ObservedObject var createRoutineViewModel: CreateRoutineViewModel
     
     @Binding var addingExercises: Bool
